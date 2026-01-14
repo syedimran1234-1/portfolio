@@ -1,0 +1,55 @@
+.aboutSection{
+    display: flex;
+    margin: 24px 0px;
+}
+
+.abountImageContainer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 24px 32px;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    outline: 2px dashed #FFD166;
+    outline-offset: 4px;
+}
+
+.aboutContext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    padding-bottom: 112px;
+}
+
+.aboutContext h1{
+    font-family: "Brygada 1918", serif;
+    font-size: 56px;
+    margin: 0px 0px 24px 0px;
+    padding: 32px 0px;
+    border-bottom: solid 1px #FFD166;
+}
+
+.aboutContext p {
+    font-family: "Brygada 1918", serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.aboutText{
+    width: 500px;
+    padding-bottom: 32px;
+    border-bottom: solid 1px #FFD166;
+}
+
+.aboutText2{
+    font-style: italic;
+    margin-top: 32px;
+}
+
+.aboutText2 > span{
+    color: rgb(255, 3, 3);
+}

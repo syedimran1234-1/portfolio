@@ -1,0 +1,82 @@
+
+.patentsSection {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patentsSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 48px;
+  color: #F4F7F9;
+}
+
+.patentsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+
+.patentCard {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 18px;
+  padding: 28px 30px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+}
+
+.patentCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(230, 236, 239, 0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+
+.patentCard h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+}
+
+.patentNumber {
+  font-size: 14px;
+  font-style: italic;
+  color: #B8C4C9;
+  margin-bottom: 16px;
+}
+
+.patentDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #D3DBDF;
+}
+
+
+@media (max-width: 768px) {
+  .patentsSection {
+    padding: 56px 0;
+  }
+
+  .patentsSection h2 {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+
+  .patentCard {
+    padding: 24px;
+  }
+}

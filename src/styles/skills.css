@@ -1,0 +1,105 @@
+
+
+.skillSection {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+
+
+.skillTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.skillTop h1 {
+  font-family: "Brygada 1918", serif;
+  font-size: 32px;
+  letter-spacing: 0.8px;
+}
+
+
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.tabBar button {
+  background-color: transparent;
+  padding: 16px 24px;              
+  margin: 16px 0px;                
+  font-family: "Brygada 1918", serif;
+  font-size: 16px;                 
+  border-radius: 50px;
+  border-bottom: 1px solid #FFD166;
+  transition: all 0.3s ease;
+  color: #E6ECEF;
+}
+
+
+.tabBar button:hover {
+  cursor: pointer;
+  border-bottom-color: transparent;
+  color: #FFD166;
+}
+
+
+
+.tabs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;   
+  justify-items: center;
+  gap: 24px;
+}
+
+
+
+.tabCards {
+  padding: 40px;                    
+  width: 500px;                     
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  text-align: center;
+  border-radius: 16px;              
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+
+.tabCards:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(47, 164, 169, 0.9),
+    rgba(47, 164, 169, 0.75)
+  );
+  transform: translateY(-4px);
+}
+
+
+.tabCards p {
+  font-family: "Brygada 1918", serif;
+  font-size: 16px;                  
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 900px) {
+  .tabs {
+    grid-template-columns: 100%;
+  }
+
+  .tabCards {
+    width: 90%;
+  }
+}

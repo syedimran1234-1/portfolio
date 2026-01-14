@@ -1,0 +1,14 @@
+.mainContainer {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0 64px;
+
+    background:
+    linear-gradient(
+        160deg,
+        #3C4E55 0%,
+        #090f11 100%
+    );
+
+}

@@ -1,0 +1,162 @@
+
+.experienceSection {
+  height: 100vh;
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.expTitelCon {
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 40px;
+}
+
+.experienceTitle {
+  font-family: "Brygada 1918", serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #F4F7F9;
+}
+
+
+.experienceCards {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 64px 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left: 2px solid rgba(255, 209, 102, 0.45);
+}
+
+
+.experienceCards::-webkit-scrollbar {
+  width: 6px;
+}
+
+.experienceCards::-webkit-scrollbar-thumb {
+  background-color: #556A72;
+  border-radius: 10px;
+}
+
+.experienceCards::-webkit-scrollbar-thumb:hover {
+  background-color: #6A828C;
+}
+
+
+.experienceCard {
+  position: relative;
+  margin: 0 0 48px;
+  padding: 32px 32px 32px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 209, 102, 0.55);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.experienceCard::before {
+  content: "";
+  position: absolute;
+  left: -73px;
+  top: 36px;
+  width: 14px;
+  height: 14px;
+  background-color: #FFD166;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(255, 209, 102, 0.18);
+}
+
+
+.expCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.expCardHeader h2 {
+  font-family: "Brygada 1918", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.expDuration {
+  font-size: 14px;
+  font-style: italic;
+  color: #B8C4C9;
+  white-space: nowrap;
+}
+
+
+.expCardContent {
+  padding-top: 8px;
+}
+
+.expResponsibilities {
+  padding-left: 0;
+}
+
+.expResponsibilities li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-family: "Brygada 1918", serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #D3DBDF;
+  list-style: none;
+}
+
+.expResponsibilities li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #FFD166;
+}
+
+
+@media (max-width: 768px) {
+  .experienceSection {
+    padding: 48px 0;
+  }
+
+  .experienceTitle {
+    font-size: 26px;
+  }
+
+  .experienceCards {
+    padding: 0 24px 32px;
+    border-left: none;
+  }
+
+  .experienceCard {
+    padding: 28px;
+  }
+
+  .experienceCard::before {
+    display: none;
+  }
+}

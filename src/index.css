@@ -1,0 +1,41 @@
+*{
+  font-family: "Bona Nova SC", serif;
+  border: none;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  /* background-color: #3C4E55; */
+  color: #E6ECEF;
+  /* overflow: hidden; */
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-bold {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.brygada-1918 {
+  font-family: "Brygada 1918", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
