@@ -91,3 +91,43 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .sideBar {
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 28px 20px;
+    border-radius: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: -10px 0 24px rgba(0, 0, 0, 0.45);
+    overflow-y: auto;
+  }
+
+  .sideBarTitle {
+    font-size: 22px;
+    margin-bottom: 24px;
+    align-self: center;
+  }
+
+  .sideBarLinksItem {
+    font-size: 15px;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .sideBarLinksItem::after {
+    bottom: -6px;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .sideBarBackgroundClick {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}

@@ -83,19 +83,35 @@
 
 @media (max-width: 768px) {
   .patentsSection {
-    padding: 40px 16px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 16px 16px;
+    overflow: hidden;
   }
 
   .patentsSection h2 {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
+    flex-shrink: 0;
   }
 
   .patentsCards {
+    flex: 1;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 50%;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .patentsCards::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   .patentCard {
@@ -105,17 +121,9 @@
 
   .patentCard h3 {
     font-size: 17px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-  }
-
-  .patentNumber {
-    font-size: 13px;
-    margin-bottom: 12px;
   }
 
   .patentDescription {
     font-size: 14px;
-    line-height: 1.6;
   }
 }

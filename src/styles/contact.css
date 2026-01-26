@@ -267,15 +267,12 @@
     overflow-y: auto;
   }
 
+  
   .formGroup input,
   .formGroup textarea {
     font-size: 14px;
     padding: 12px 14px;
     border-radius: 12px;
-  }
-
-  .formGroup textarea {
-    min-height: 110px;
   }
 
   .submitButton {
