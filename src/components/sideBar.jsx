@@ -11,6 +11,9 @@ function SideBar() {
                 <div>
                     <h2 className="sideBarTitle">Menu</h2>
                 </div>
+                <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem mobile-only"} to="/">Home</NavLink>
+                <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem mobile-only"} to="/about">About Me</NavLink>
+                <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem mobile-only"} to="/contact">Contact Me</NavLink>
                 <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem"} to="/education">Education</NavLink>
                 <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem"} to="/skills">Skills</NavLink>
                 <NavLink onClick={() => { setIsOpen(false) }} className={"sideBarLinksItem"} to="/experties">Expertise</NavLink>

@@ -53,3 +53,40 @@
 .aboutText2 > span{
     color: rgb(255, 3, 3);
 }
+
+@media (max-width: 768px) {
+  .aboutSection {
+    flex-direction: column;
+    margin: 16% 0;
+  }
+
+  .abountImageContainer {
+    display: none;
+  }
+
+  .aboutContext {
+    padding: 0 16px;
+    padding-bottom: 48px;
+    align-items: flex-start;
+  }
+
+  .aboutContext h1 {
+    font-size: 36px;
+    padding: 16px 0;
+    margin-bottom: 16px;
+  }
+
+  .aboutContext p {
+    font-size: 15px;
+  }
+
+  .aboutText {
+    width: 100%;
+    padding-bottom: 24px;
+  }
+
+  .aboutText2 {
+    margin-top: 24px;
+    font-size: 14px;
+  }
+}

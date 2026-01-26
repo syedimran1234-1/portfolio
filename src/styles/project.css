@@ -80,3 +80,42 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .patentsSection {
+    padding: 40px 16px;
+  }
+
+  .patentsSection h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .patentsCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .patentCard {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .patentCard h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .patentNumber {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .patentDescription {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

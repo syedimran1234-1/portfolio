@@ -123,3 +123,106 @@
     cursor: pointer;
     color: #FFFFFF;
 }
+
+@media (max-width: 1024px) {
+    .heroContext {
+        margin-left: 48px;
+    }
+
+    .heroContext h1 {
+        font-size: 44px;
+    }
+
+    .heroContext h4 {
+        font-size: 20px;
+    }
+
+    .heroBottonText {
+        width: 100%;
+    }
+
+    .heroImage {
+        width: 45%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 15%;
+
+    }
+
+    .heroContext {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .heroTopContext {
+        border-bottom: none;
+    }
+
+    .heroContext h1 {
+        font-size: 34px;
+        margin: 16px 0;
+    }
+
+    .heroContext h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .heroBottonText {
+        font-size: 15px;
+        line-height: 22px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .heroBottonSmallText {
+        font-size: 11px;
+    }
+
+    .heroImage {
+        width: 70%;
+        margin: 0;
+    }
+
+    .imageContainer {
+        width: 50%;
+        margin: 24px auto;
+    }
+
+    .heroCta {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .heroCta .button1,
+    .heroCta .button2 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .heroContext h1 {
+        font-size: 28px;
+    }
+
+    .heroContext h4 {
+        font-size: 16px;
+    }
+
+    .imageContainer {
+        width: 85%;
+    }
+
+    .heroBottonText {
+        font-size: 14px;
+    }
+}

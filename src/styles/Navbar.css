@@ -87,3 +87,73 @@
 .burgerIcon button:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
+
+/* =========================
+   Navbar Responsive Styles
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 24px 20px;
+  }
+
+  .navLinks {
+    width: auto;
+    margin-left: 0;
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 0px;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(10, 14, 18, 0.95);
+    border-bottom: 1px solid #FFD166;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* when menu is open (add this class via JS) */
+  .navLinks.open {
+    max-height: 300px;
+    padding: 16px 0;
+  }
+
+  .navLinksItem {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  .navLinksItem::after {
+    display: none;
+  }
+
+  .burgerIcon {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navName h3 {
+    font-size: 16px;
+  }
+
+  .navLinksItem {
+    font-size: 15px;
+  }
+}

@@ -160,3 +160,71 @@
     display: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  .experienceSection {
+    height: 100vh;
+    padding: 24px 0 16px;
+    overflow: hidden;
+    padding-bottom: 80%;
+  }
+
+  .expTitelCon {
+    padding: 0 16px 16px;
+    flex-shrink: 0;
+  }
+
+  .experienceTitle {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .experienceCards {
+    flex: 1;
+    width: 100%;
+    padding: 0 16px 24px;
+    overflow-y: auto;
+    border-left: none;
+  }
+
+  .experienceCard {
+    margin-bottom: 20px;
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .experienceCard::before {
+    display: none;
+  }
+
+  .expCardHeader {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .expCardHeader h2 {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .expDuration {
+    font-size: 12px;
+  }
+
+  .expResponsibilities li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .experienceCards::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .experienceCards::-webkit-scrollbar-thumb {
+    background-color: #556A72;
+    border-radius: 10px;
+  }
+}
