@@ -207,26 +207,33 @@
 
     .heroTopContext {
         border-bottom: none;
+        min-height: fit-content;
+
+    }
+
+    .heroBottomContext{
+        min-height: fit-content;
     }
 
     .heroContext h1 {
-        font-size: 34px;
-        margin: 16px 0;
+        font-size: 32px;
+        margin: 4px 0;
     }
 
     .heroContext h4 {
-        font-size: 18px;
-        margin-bottom: 16px;
+        font-size: 16px;
+        margin: 2px;
     }
 
     .heroBottonText {
-        font-size: 15px;
+        font-size: 10px;
         line-height: 22px;
-        margin-top: 16px;
+        margin-top: 2px;
     }
 
     .heroBottonSmallText {
-        font-size: 11px;
+        font-size: 8px;
+        margin: 2px 0px;
     }
 
     .heroImage {
@@ -236,7 +243,7 @@
 
     .imageContainer {
         width: 60%;
-        margin: 24px auto;
+        margin: 15px;
     }
 
     .heroCta {
@@ -250,25 +257,5 @@
     .heroCta .button2 {
         width: 100%;
         max-width: 280px;
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-
-    .heroContext h1 {
-        font-size: 28px;
-    }
-
-    .heroContext h4 {
-        font-size: 16px;
-    }
-
-    .imageContainer {
-        width: 85%;
-    }
-
-    .heroBottonText {
-        font-size: 14px;
     }
 }

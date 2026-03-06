@@ -222,7 +222,7 @@
   }
 
   .experienceCards::-webkit-scrollbar {
-    width: 4px;
+    display: none;
   }
 
   .experienceCards::-webkit-scrollbar-thumb {

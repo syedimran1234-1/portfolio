@@ -320,7 +320,11 @@
   }
 
   .contactCards::-webkit-scrollbar {
-    height: 4px;
+    display: none;
+  }
+
+  .formCard::-webkit-scrollbar{
+    display: none;
   }
 
   .contactCards::-webkit-scrollbar-thumb {

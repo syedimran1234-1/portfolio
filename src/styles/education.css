@@ -77,13 +77,17 @@
 
   .educationSection {
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding: 20px 0px;
     overflow-y: auto;
     overflow-x: hidden;
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
+  }
+
+  .educationSection::-webkit-scrollbar{
+    display: none;
   }
 
   .sectionTitle {
@@ -95,11 +99,11 @@
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     gap: 24px;
     width: 100%;
-    margin-bottom: 100px;
   }
 
   .cards {
     width: 100%;
   }
+  
 
 }
