@@ -208,7 +208,7 @@
     .heroTopContext {
         border-bottom: none;
         min-height: fit-content;
-
+        margin-bottom: 12px;
     }
 
     .heroBottomContext{
