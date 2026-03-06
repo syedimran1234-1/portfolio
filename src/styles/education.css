@@ -1,123 +1,105 @@
 .educationSection {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 40px;
+  padding: 60px 40px;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-family: "Brygada 1918", serif;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #FFD166;
+  width: fit-content;
+}
+
+
+
+/* GRID LAYOUT */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 
 .cards {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.02)
-  );
-  width: 500px;                
-  padding: 32px;               
-  margin: 24px;                
-  border-radius: 24px;         
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02));
+
+  padding: 26px;
+  border-radius: 20px;
+
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+
   transition: all 0.3s ease;
 }
 
+
+
+/* hover animation */
 .cards:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 209, 102, 0.45);
+  transform: translateY(-6px);
+  border-color: rgba(255, 209, 102, 0.5);
 }
 
 
-.cards h1 {
-  margin: 24px 0px;            
-  padding-bottom: 8px;
-  border-bottom: 1px solid #FFD166;
-  font-family: "Brygada 1918", serif;
-  font-size: 24px;             
-}
 
+/* degree title */
 .cards h3 {
-  width: fit-content;
-  margin: 8px 0px;             
+  font-size: 18px;
+  margin-bottom: 6px;
   font-family: "Brygada 1918", serif;
-  font-size: 16px;             
-  color: #D3DBDF;
 }
 
 
 
-.eduImageContainer {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 15%;
-  margin: 24px 24px;
-  width: 40%;                  
-  height: 75vh;                
-  outline: 2px dashed #FFD166;
-  outline-offset: 4px;
+/* year */
+.year {
+  font-size: 14px;
+  color: #FFD166;
+  margin-bottom: 10px;
 }
 
 
 
-.eduImageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: rotate(3deg);     
+/* description */
+.cards p {
+  font-size: 14px;
+  color: #C9D1D9;
+  margin: 4px 0;
+  line-height: 1.4;
 }
 
 
 
-@media (max-width: 900px) {
+/* mobile */
+@media (max-width:768px) {
+
   .educationSection {
-    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 100%;
   }
 
-  .eduImageContainer {
-    width: 80%;
-    height: 45vh;
-  }
-
-  .cards {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .educationSection {
-    flex-direction: column;
-    padding: 16px;
-  }
-
-  .eduImageContainer {
-    display: none;
+  .sectionTitle {
+    font-size: 26px;
   }
 
   .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 24px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+    margin-bottom: 100px;
   }
 
   .cards {
     width: 100%;
-    max-width: 520px;
-    margin: 0;
-    padding: 24px;
-    border-radius: 20px;
   }
 
-  .cards h1 {
-    font-size: 22px;
-    margin: 16px 0;
-  }
-
-  .cards h3 {
-    font-size: 15px;
-    margin: 6px 0;
-  }
 }

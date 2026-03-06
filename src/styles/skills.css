@@ -37,7 +37,7 @@
   font-family: "Brygada 1918", serif;
   font-size: 16px;                 
   border-radius: 50px;
-  border-bottom: 1px solid #FFD166;
+  /* border-bottom: 1px solid #FFD166; */
   transition: all 0.3s ease;
   color: #E6ECEF;
 }
@@ -107,6 +107,7 @@
 @media (max-width: 768px) {
   .skillSection {
     padding-bottom: 24px;
+    height: 100%;
   }
 
   .skillTop {
@@ -141,6 +142,9 @@
     flex-direction: column;
     gap: 16px;
     padding: 0 16px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 350px;
   }
 
   .tabCards {

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About"
@@ -19,6 +19,49 @@ import './App.css'
 
 function App() {
   const { isOpen } = useContext(AppContext);
+
+  useEffect(() => {
+    const container = document.querySelector(".mainContainer");
+
+    let mouseX = 50;
+    let mouseY = 50;
+
+    let currentX = 50;
+    let currentY = 50;
+
+    let currentX2 = 60;
+    let currentY2 = 40;
+
+    const handleMouseMove = (e) => {
+      const rect = container.getBoundingClientRect();
+      mouseX = ((e.clientX - rect.left) / rect.width) * 100;
+      mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+    };
+
+    const animate = () => {
+      // Primary layer (closer to cursor)
+      currentX += (mouseX - currentX) * 0.06;
+      currentY += (mouseY - currentY) * 0.06;
+
+      // Secondary layer (deeper, slower movement)
+      currentX2 += (mouseX - currentX2) * 0.02;
+      currentY2 += (mouseY - currentY2) * 0.02;
+
+      container.style.setProperty("--x", `${currentX}%`);
+      container.style.setProperty("--y", `${currentY}%`);
+      container.style.setProperty("--x2", `${currentX2}%`);
+      container.style.setProperty("--y2", `${currentY2}%`);
+
+      requestAnimationFrame(animate);
+    };
+
+    container.addEventListener("mousemove", handleMouseMove);
+    animate();
+
+    return () => {
+      container.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <>

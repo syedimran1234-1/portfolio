@@ -1,45 +1,111 @@
-.hero{
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.heroContext{
-    margin: 0px 0px 0px 112px;
+/* LEFT SECTION WIDTH LOCK */
+.heroContext {
+    width: 55%;
+    max-width: 700px;
+    margin-left: 112px;
 }
 
-.heroContext h1{
-      font-family: "Brygada 1918", serif;
-      font-size: 56px;
-      margin: 24px 0px;
+/* ---------------- TOP SECTION ---------------- */
+
+.heroTopContext {
+    width: 100%;
+    max-width: 600px;
+    min-height: 130px; /* prevents vertical jump */
+    border-bottom: solid 1px #FFD166;
 }
 
-.heroContext h4{
+.heroContext h1 {
+    font-family: "Brygada 1918", serif;
+    font-size: 56px;
+    margin: 24px 0px;
+}
+
+.heroContext h4 {
     font-family: "Brygada 1918", serif;
     font-size: 24px;
     color: #B8C4C9;
     margin: 8px 0px 24px 0px;
 }
-.heroTopContext{
-    border-bottom: solid 1px #FFD166;
+
+/* ---------------- BOTTOM SECTION ---------------- */
+
+.heroBottomContext {
+    width: 100%;
+    max-width: 600px;
+    min-height: 140px; /* prevents shift */
 }
 
-.heroBottonText{
+.heroBottonText {
     font-family: "Brygada 1918", serif;
     font-size: 17px;
-    width: 400px;
+    max-width: 500px;
+    width: 100%;
     margin-top: 24px;
     line-height: 25px;
 }
 
-.heroBottonSmallText{
+.heroBottonSmallText {
     color: #B8C4C9;
     font-size: 12px;
     margin: 16px 0px;
+    max-width: 500px;
+    width: 100%;
 }
 
+/* ---------------- CTA SECTION ---------------- */
 
-.heroImage{
+.heroCta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 70px; /* prevents shift */
+}
+
+/* Stable fixed button width */
+.heroCta .button1,
+.heroCta .button2 {
+    width: 200px;
+    padding: 16px;
+    border-radius: 50px;
+    font-family: "Brygada 1918", serif;
+}
+
+/* Button Styles */
+.heroCta .button1 {
+    border: none;
+    background-color: #2FA4A9;
+    color: #FFFFFF;
+}
+
+.heroCta .button1:hover {
+    background-color: #24878B;
+    cursor: pointer;
+}
+
+.heroCta .button2 {
+    border: solid 1px #2FA4A9;
+    background-color: transparent;
+    color: #2FA4A9;
+}
+
+.heroCta .button2:hover {
+    background-color: #2FA4A9;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* ---------------- IMAGE SECTION ---------------- */
+
+.heroImage {
     width: 40%;
     display: flex;
     justify-content: center;
@@ -47,7 +113,7 @@
     margin: 0px 24px;
 }
 
-.imageContainer{
+.imageContainer {
     display: flex;
     position: relative;
     justify-content: center;
@@ -57,8 +123,6 @@
     margin: 40px 0px;
     width: 90%;
     aspect-ratio: 1 / 1;
-    outline: 2px dashed #FFD166;
-    outline-offset: 4px;
 }
 
 .imageContainer img {
@@ -75,56 +139,35 @@
         );
 }
 
+/* ---------------- VISIBILITY CONTROL ---------------- */
 
-@keyframes rotateCW {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+.role,
+.heroBottonSmallText,
+.heroCta {
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
-@keyframes rotateCCW {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+.visible {
+    opacity: 1;
 }
 
-.heroCta{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* ---------------- CURSOR ---------------- */
+
+.cursor {
+    margin-left: 4px;
+    animation: blink 0.8s infinite;
 }
 
-.heroCta .button1{
-    border:  none;
-    font-family: "Brygada 1918", serif;
-    width: 50%;
-    background-color: #2FA4A9;
-    padding: 16px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    margin-right: 16px;
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-.button2{
-    border:  solid 1px #2FA4A9;
-    font-family: "Brygada 1918", serif;
-    width: 50%;
-    background-color: transparent;
-    padding: 16px;
-    border-radius: 50px;
-    color: #2FA4A9;
-}
-
-.heroCta .button1:hover{
-    background-color: #24878B;
-    cursor: pointer;
-}
-
-.button2:hover{
-    background-color: #2FA4A9;
-    cursor: pointer;
-    color: #FFFFFF;
-}
+/* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 1024px) {
+
     .heroContext {
         margin-left: 48px;
     }
@@ -137,24 +180,29 @@
         font-size: 20px;
     }
 
-    .heroBottonText {
-        width: 100%;
-    }
-
     .heroImage {
         width: 45%;
     }
 }
 
 @media (max-width: 768px) {
+
     .hero {
         flex-direction: column-reverse;
         text-align: center;
     }
 
     .heroContext {
+        width: 100%;
+        max-width: 100%;
         margin: 0;
         padding: 0 20px;
+    }
+
+    .heroTopContext,
+    .heroBottomContext,
+    .heroCta {
+        max-width: 100%;
     }
 
     .heroTopContext {
@@ -174,7 +222,6 @@
     .heroBottonText {
         font-size: 15px;
         line-height: 22px;
-        width: 100%;
         margin-top: 16px;
     }
 
@@ -188,7 +235,7 @@
     }
 
     .imageContainer {
-        width: 50%;
+        width: 60%;
         margin: 24px auto;
     }
 
@@ -196,17 +243,19 @@
         flex-direction: column;
         gap: 12px;
         margin-top: 24px;
+        align-items: center;
     }
 
     .heroCta .button1,
     .heroCta .button2 {
         width: 100%;
-        margin: 0;
+        max-width: 280px;
     }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
+
     .heroContext h1 {
         font-size: 28px;
     }
